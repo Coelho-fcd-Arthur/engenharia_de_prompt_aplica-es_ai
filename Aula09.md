@@ -1,15 +1,14 @@
-## 1. Introdução e Visão Geral
-Este parecer analisa as práticas de programação assistida por IA abordadas na Unidade II. A principal conclusão é que a IA não deve ser encarada como uma substituta, mas como uma ferramenta de **aumento de capacidades**. O foco do desenvolvedor moderno desloca-se da escrita manual de sintaxe para a arquitetura de soluções lógicas e seguras.
+## 1. Introdução: O Humano no Controle
+A relação entre humano e IA deve ser vista como uma verdadeira parceria de pilotagem: **a IA atua como o copiloto, mas o humano permanece obrigatoriamente no posto de piloto**. O valor do desenvolvedor moderno não está mais em apenas "digitar sintaxe", mas em arquitetar soluções lógicas, seguras e estratégicas.
 
-## 2. Práticas de Workflow e Implementação
-Durante os estudos, destaca-se a importância do **Desenvolvimento Guiado por Comentários**. O fluxo estabelecido em três etapas (Intenção Humana → Proposta da IA → Refinamento Humano) garante que o controle do código permaneça com o desenvolvedor.
+## 2. Confiança Calibrada e Workflow
+Conforme discutido no Podcast da Unidade 2, a colaboração só é eficiente quando existe uma **confiança calibrada**. Isso significa:
+*   **Avaliação Crítica:** É preciso testar, validar e entender as forças e fraquezas da ferramenta, e nunca confiar cegamente nela.
+*   **Diálogo Estruturado:** Utilizar a IA para gerar propostas baseadas em intenções humanas (comentários), mas mantendo o refinamento e a validação final como tarefas humanas.
+*   **IA como Analista:** Usar a ferramenta para explicar códigos legados e gerar testes unitários que cubram falhas (edge cases) que poderiam passar despercebidas.
 
-*   **Refatoração e Manutenção:** A transição da IA de "geradora" para "analista de compreensão" é vital para lidar com código legado, permitindo documentar e analisar impactos antes de qualquer alteração.
-*   **Automação de Testes:** A utilização da IA para gerar testes unitários e identificar *edge cases* aumenta a robustez do software, cobrindo falhas que muitas vezes passam despercebidas no desenvolvimento manual.
-
-## 3. Análise Crítica: Ética, Segurança e Ferramentas
-O uso de ferramentas como **GitHub Copilot, Replit e Ghostwriter** exige responsabilidade técnica e ética:
-
-*   **Responsabilidade Legal:** Como o assistente não possui consciência, o desenvolvedor assume total responsabilidade por cada *commit*. O código deve passar por checklists de segurança contra vulnerabilidades (SQL Injection, XSS).
-*   **Propriedade Intelectual:** Vigilância constante sobre as licenças de código para evitar violações em produtos comerciais.
-*   **Transparência:** Em sistemas críticos, a explicabilidade é mandatória. Não se aceita uma "caixa preta" em algoritmos que impactam vidas humanas.
+## 3. Responsabilidade Final e Ética
+A **responsabilidade final é sempre nossa**. Não importa o quão avançada ou "inteligente" a ferramenta seja, a decisão de dar o *commit* e colocar o código em produção é exclusivamente humana. Isso abrange três pilares críticos:
+1.  **Legal:** O desenvolvedor e a organização respondem juridicamente pelo código implementado.
+2.  **Segurança:** A IA não tem consciência de segurança; cabe ao humano sanitizar dados e evitar vulnerabilidades como Injeção de SQL.
+3.  **Ética:** Evitar vieses algoritmos e garantir a explicabilidade em sistemas que impactam vidas.
