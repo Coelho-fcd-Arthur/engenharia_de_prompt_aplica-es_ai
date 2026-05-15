@@ -6,7 +6,7 @@ Desenvolvi um **Painel Automatizado de Gestão de Projetos para Agências de Mar
 ---
 
 ## 🖥️ Protótipo
-* **Link de acesso:** [Painel de Gestão no Airtable](https://airtable.com)
+* **Link de acesso:** [Painel de Gestão no Airtable]([https://airtable.com](https://airtable.com/invite/l?inviteId=invdQTqUrGRJ3Fcvi&inviteToken=6a2e681d2236a0f372bc53cf7eded8d8f54b741e72382eb54d40eeb2b96cb23f&utm_medium=email&utm_source=product_team&utm_content=transactional-alerts))
 * **Funcionamento:** O painel recebe o nome da demanda, o responsável técnico e o status atual. O campo nativo de Inteligência Artificial (`Attachment Summary` / AI Prompt Field) cruza esses dados estruturados de forma autônoma e gera um resumo gerencial com o status em tempo real e o próximo passo urgente para o profissional.
 
 > Coloque os arquivos de imagem ou PDF na pasta `/docs`.
