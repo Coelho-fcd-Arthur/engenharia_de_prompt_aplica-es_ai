@@ -6,10 +6,8 @@ Desenvolvi um **Painel Automatizado de Gestão de Projetos para Agências de Mar
 ---
 
 ## 🖥️ Protótipo
-* **Link de acesso:** (https://airtable.com/invite/l?inviteId=invdQTqUrGRJ3Fcvi&inviteToken=6a2e681d2236a0f372bc53cf7eded8d8f54b741e72382eb54d40eeb2b96cb23f&utm_medium=email&utm_source=product_team&utm_content=transactional-alerts))
+* **Link de acesso:** [Painel de Gestão no Airtable (Link de Convite)](https://airtable.com/invite/l?inviteId=invbQNNqqQFZSXDfh&inviteToken=46d0686282cf71b4d05b4804bb4a6023ae019efe4bf5c6eba56f1b2389df32d0&utm_medium=email&utm_source=product_team&utm_content=transactional-alerts)
 * **Funcionamento:** O painel recebe o nome da demanda, o responsável técnico e o status atual. O campo nativo de Inteligência Artificial (`Attachment Summary` / AI Prompt Field) cruza esses dados estruturados de forma autônoma e gera um resumo gerencial com o status em tempo real e o próximo passo urgente para o profissional.
-
-> Coloque os arquivos de imagem ou PDF na pasta `/docs`.
 
 ---
 
@@ -27,18 +25,23 @@ Com base na vivência prática no laboratório, identifiquei as seguintes vantag
 
 ---
 
-## ⚠️ Limitações Encontradas
-Durante o desenvolvimento do mini-projeto, mapeei as seguintes restrições técnicas da plataforma:
+## ⚠️ Limitações do Sistema e Erros Comuns de Usuários
+Durante o desenvolvimento do mini-projeto, mapeei restrições técnicas da inteligência artificial e falhas operacionais simples de atenção cometidas por usuários no dia a dia:
+
+### Restrições Técnicas da IA
 1. **Trava de Esquema Relacional:** A IA é estritamente dependente da existência prévia dos campos. Ao tentar rodar um prompt citando colunas inexistentes (como 'Prazo Final'), o sistema rejeita a execução e aponta erro de estrutura.
 2. **Dependência de Dados Mínimos:** O ecossistema recusa o processamento e não gera respostas de forma preventiva se os campos obrigatórios (*Name*, *Status* e *Assignee*) estiverem completamente vazios.
-3. **Risco de lock-in tecnológico:** A lógica interna dos prompts de inteligência artificial e as automações configuradas ficam presas ao Airtable, não sendo possível exportá-las diretamente para código bruto caso o sistema mude no futuro.
+
+### Erros Humanos Comuns (Falta de Atenção)
+1. **Falha de Salvamento no Status:** O usuário digita a nova opção de status nas configurações da coluna, mas fecha a janela antes de apertar "Enter" para salvar. Como o campo fica vazio ou com grafia errada, a lógica condicional da IA falha ao tentar ler a célula.
+2. **Confusão de Inputs (Entradas Trocadas):** Na pressa do preenchimento diário, o usuário cola o texto descritivo do projeto dentro da coluna de "Responsável" (campo configurado para e-mails/usuários). O Airtable bloqueia a colagem inválida, deixando o campo em branco, o que impede a IA de processar o plano de ação.
 
 ---
 
 ## 📚 Reflexão Crítica
 Para contornar as limitações de espaço visual das linhas do Airtable, utilizei engenharia de prompt focada em concisão, instruindo a IA a gerar respostas diretas de no máximo duas frases. 
 
-Diante dos erros de esquema encontrados nos primeiros testes (tabela vazia e colunas faltantes), a experiência prática provou a necessidade de uma governança rígida de dados: uma IA no-code só é eficiente se a estrutura de colunas que a alimenta estiver perfeitamente saneada e padronizada. Concluí que, para validação ágil de mercado (MVP), o Airtable entrega alta performance, mas exige planejamento prévio do banco de dados antes da escrita do prompt.
+Diante dos erros de esquema e falhas operacionais observados, a experiência prática provou a necessidade de uma governança rígida de dados: uma IA no-code só é eficiente se a estrutura de colunas que a alimenta estiver perfeitamente saneada e padronizada. Concluí que, para validação ágil de mercado (MVP), as ferramentas no-code entregam alta performance, mas continuam 100% dependentes da precisão e atenção do fator humano na entrada dos dados.
 
 ---
 
@@ -65,7 +68,7 @@ O funcionamento do protótipo foi validado com sucesso através de três cenári
 ## 📝 Registro da Aula
 * **Data:** 11/05/2026
 * **Atividade:** Discussão crítica + mini-projeto de aplicação
-* **Local:** Laboratório de informática / Quadro branco
+* **Local:** Laboratório de informática
 * **Professor(a):** Kadidja Valéria
 
 ---
@@ -73,4 +76,3 @@ O funcionamento do protótipo foi validado com sucesso através de três cenári
 ## 🚀 Próximos Passos
 * **Melhorias do protótipo:** Integrar a tabela do Airtable ao Slack ou WhatsApp através de ferramentas como Make ou Zapier, fazendo com que os alertas gerados pela IA sejam disparados como notificações push direto no bolso do responsável.
 * **Evoluções para o Projeto Final:** Expandir o banco de dados criando tabelas relacionadas (múltiplas abas) para gerenciar o controle financeiro de custos por cliente e horas trabalhadas (*timesheet*) por demanda.
-
