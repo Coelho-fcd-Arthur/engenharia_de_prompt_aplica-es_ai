@@ -122,12 +122,7 @@ O projeto foi desenvolvido **individualmente** (solo) com suporte externo limita
 
 ### Melhorias Planejadas
 
-1. **Implementar Controle de Acesso por Usuário**
-   - Cada vendedor visualiza apenas seus próprios clientes
-   - Gerentes e supervisores têm visibilidade total
-   - Requer upgrade do plano ou migração para plataforma com mais controle granular
-
-2. **Criar Listas de Futuras Oportunidades**
+   **Criar Listas de Futuras Oportunidades**
    - Pipeline de oportunidades para prospecção
    - Vinculação entre clientes e oportunidades
 
